@@ -2,7 +2,7 @@
 void _level(const binary_tree_t *tree, size_t level, void (*func)(int));
 
 /**
- * level - look for the level of the tree
+ * _level - look for the level of the tree
  * @tree: pointer to the root node
  * @level: level of the tree
  * @func: pomter function
@@ -41,7 +41,8 @@ size_t binary_tree_height(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_levelorder - goes through a binary tree using level-order traversal
+ * binary_tree_levelorder - goes through a binary
+ * tree using level-order traversal
  * @tree: pointer to the root node of the tree to traverse
  * @func: pointer to a function to call for each node
  */
