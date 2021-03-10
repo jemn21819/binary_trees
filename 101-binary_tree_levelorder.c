@@ -29,15 +29,15 @@ void _level(const binary_tree_t *tree, size_t level, void (*func)(int))
 
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t res;
+	size_t l, r;
 
 	if (!tree)
 		return (0);
-	if (!tree->left && !tree->right)
-		return (tree->parent != NULL);
-	res = (max(binary_tree_height(tree->left),
-				binary_tree_height(tree->right)) + 1);
-	return (res);
+	l = binary_tree_height(tree->left);
+	r = binary_tree_height(tree->right);
+	if (l >= r)
+		return (l + 1);
+	return (r + 1);
 }
 
 /**
